@@ -1,8 +1,9 @@
 "use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import ProductList from "@/components/Products/ProductList";
 import { useProducts } from "@/hooks/useProducts";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import FilterCategory from "@/components/Category/FilterCategory";
 
-const Page = () => {
+function ShopContent() {
   const {
     filteredProducts,
     loading,
@@ -128,6 +129,12 @@ const Page = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Page;
+export default function Page() {
+  return (
+    <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+      <ShopContent />
+    </Suspense>
+  );
+}
