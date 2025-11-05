@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { FaRegCheckCircle } from "react-icons/fa";
-import Checkmark from "../ui/checkmark";
+import Checkmark from "../Checkmark";
 
 const Checkout = () => {
   return (
