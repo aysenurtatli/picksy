@@ -27,6 +27,8 @@ export const useProducts = () => {
           description: item.description,
           rating: item.rating,
           reviews: item.reviews,
+          shippingInformation: item.shippingInformation,
+          returnPolicy: item.returnPolicy,
         }));
         setProducts(formattedData);
         setFilteredProducts(formattedData);
