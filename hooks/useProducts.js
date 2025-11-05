@@ -26,6 +26,7 @@ export const useProducts = () => {
           category: item.category,
           description: item.description,
           rating: item.rating,
+          reviews: item.reviews,
         }));
         setProducts(formattedData);
         setFilteredProducts(formattedData);
