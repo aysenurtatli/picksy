@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PICKSY E-COMMERCE
 
-## Getting Started
+A fully responsive e-commerce web application built with Next.js, Tailwind CSS, and modern React tools. This project includes product listing, dynamic filtering, navigation menus, theme switching, a global cart system, and more.
+![Screenshot](public/preview.png)
 
-First, run the development server:
+## 🛠️ Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js
+- React
+- Tailwind CSS
+- Shadcn/UI
+- Context API
+- React Icons
+- Sonner (Toast notifications)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It Works
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Todos are stored in the browser's LocalStorage, allowing your list to remain even after refreshing the page.
+Each todo can be customized by changing its color or deleted anytime.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Next.js App Router architecture
 
-To learn more about Next.js, take a look at the following resources:
+- Dynamic product filtering (search, category, sorting)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Category filtering synced with URL using useSearchParams
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Mobile & desktop navigation menus with outside-click closing
 
-## Deploy on Vercel
+- Dark/Light/System theme toggle using next-themes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Global cart state using Context API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Shadcn/UI components for clean UI
+
+- Responsive layout with Tailwind CSS
+
+- Loading skeletons for product cards
+
+- Breadcrumb navigation for improved UX
+
+## 💡 Future Improvements
+
+- Wishlist feature
+- Authentication & user accounts
+
+## Demo
+
+[Live Preview](https://picksy-psi.vercel.app/)
+
+## 🔍 Key Functionalities
+
+#### 🔸 Product Filtering
+
+- Search by name
+- Filter by category
+- Sort by price: lowest, highest, or recommended
+- Category selection updates the URL without page refresh
+
+#### 🔸 Navigation Menu
+
+- Desktop dropdown closes when clicking outside
+- Mobile menu automatically closes after selecting any link
+
+#### 🔸 Theme Toggle
+
+- Switch between Light, Dark, and System themes using next-themes.
+
+#### 🔸 Cart System
+
+- Total items count displayed in navbar
+- Managed globally through Context API
